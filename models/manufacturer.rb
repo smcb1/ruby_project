@@ -4,6 +4,14 @@ class Manufacturer
 
   attr_accessor(:id, :name, :product_type, :contact, :cost)
 
+  def initialize( options )
+    @id = options['id'].to_i if options['id']
+    @name = options['name']
+    @product_type = options['product_type']
+    @contact = options['contact']
+    @cost = options['cost'].to_i
+  end
+
   def save()
     sql = "INSERT INTO manufacturers
     (

@@ -4,6 +4,15 @@ class Product
 
   attr_accessor(:id, :name, :product_type, :description, :price, :quantity)
 
+  def initialize( options )
+    @id = options['id'].to_i if options['id']
+    @name = options['name']
+    @product_type = options['product_type']
+    @description = options['description']
+    @price = options['price'].to_i
+    @quantity = options['quantity'].to_i
+  end
+
   def save()
     sql = "INSERT INTO products
     (
@@ -34,7 +43,7 @@ class Product
     WHERE id = $1"
     values = [id]
     results = SqlRunner.run( sql, values )
-    return Produt.new( results.first )
+    return Product.new( results.first )
   end
 
   def self.delete_all()
