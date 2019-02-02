@@ -3,12 +3,12 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/manufacturer.rb' )
 also_reload( '../models/*' )
 
-get '/manufacturer' do
+get '/manufacturers' do
   @manufacturers = Manufacturer.all()
-  erb ( :"products/index" )
+  erb ( :"manufacturers/index" )
 end
 
 get '/manufacturers/:id' do
   @manufacturer = Manufacturer.find(params['id'].to_i)
-  erb(:"manufacturer/show")
+  erb(:"manufacturers/show")
 end

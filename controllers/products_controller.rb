@@ -3,12 +3,12 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/product.rb' )
 also_reload( '../models/*' )
 
-get '/product' do
+get '/products' do
   @products = Product.all()
-  erb ( :"products/index" )
+  erb (:"products/index")
 end
 
-get '/products/:id' do
-  @product = Product.find(params['id'].to_i)
-  erb(:"product/show")
-end
+# get '/products/:id' do
+#   @product = Product.find(params['id'].to_i)
+#   erb(:"product/show")
+# end

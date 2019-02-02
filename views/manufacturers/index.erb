@@ -1,0 +1,18 @@
+<h1>Manufacturers</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th></th>
+    <th>Contact</th>
+  </tr>
+  <% for manufacturer in @manufacturers %>
+  <tr>
+    <td><a href="/manufacturers/<%= manufacturer.id %>"><%= manufacturer.name %></a></td>
+    <td>|</td>
+    <td><%= manufacturer.contact %></td>
+    <td>|</td>
+    <td>£<%= manufacturer.cost %></td>
+  </tr>
+  <% end %>
+</table>
