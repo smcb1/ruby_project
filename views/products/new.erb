@@ -1,10 +1,10 @@
 <h1>Add a new product:</h1>
 <form action="/products" method="post">
   <div class="form-wrapper">
-    <div class="form-el">
+    <div>
     <label>
       Select a Product:
-      <select name="product_type">
+      <select id="product_type" name="product_type">
         <option value="Banjo">Banjo</option>
         <option value="Strings">Strings</option>
         <option value="Bridge">Bridge</option>
@@ -14,28 +14,27 @@
     </label>
   </div>
 
-    <div class="form-el">
+    <div>
       <label for="name">Product Name:</label>
-      <input type="text" name="name" id="name" autofocus/>
+      <input type="text" name="name" id="name" autofocus required/>
     </div>
 
-    <div class="form-el">
+    <div>
       <label for="description">Description:</label>
-      <input type="text" name="description" id="description"/>
+      <input type="text" name="description" id="description" required/>
     </div>
 
-    <div class="form-el">
+    <div>
       <label for="price">Price:</label>
-      <input type="text" name="price" id="price"/>
+      <input type="text" name="price" id="price" required/>
     </div>
 
-
-    <div class="form-el">
+    <div>
       <label for="quantity">Quantity:</label>
-      <input type="text" name="quantity" id="quantity"/>
+      <input type="text" name="quantity" id="quantity" required/>
     </div>
 
-    <div class="form-el">
+    <div>
       <input type="submit" class="button" value="Add Product"/>
     </div>
   </div>

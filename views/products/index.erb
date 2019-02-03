@@ -1,26 +1,20 @@
 <h1>Products</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th>Product Type</th>
-    <th></th>
-    <!-- <th>Price</th>
-    <th></th>
-    <th>Quantity</th> -->
-  </tr>
-  <% for product in @products %>
-  <tr>
+<button class="button"><span><a href="/products/new">Add new product</a></span></button>
 
-    <td><a href="/products/<%= product.id %>"><%= product.name %></a></td>
-    <td>|</td>
-    <td><%= product.product_type %></td>
-    <!-- <td>|</td> -->
-    <!-- <td>£<%= product.price %></td> -->
-    <!-- <td>|</td> -->
-    <!-- <td><img src="<%= product.url %>" alt="Banjo picture"></td> -->
-  </tr>
+<div id="flex-container">
+  <% for product in @products %>
+  <div class="item">
+    <a href="/products/<%= product.id %>"><%= product.name %></a>
+  </div>
+  <div class="item">
+    <img src="<%= product.url %>" class="prod_img" alt="Banjo picture">
+  </div>
+  <div class="item">
+   <p>Type:  <%= product.product_type %> </p>
+  </div>
+  <div class="item">
+    <p>Cost:  £<%= product.price %> </p>
+  </div>
   <% end %>
-  <p><a href="products/new" class="button">Add a new product here</a></p>
-</table>
+</div>
