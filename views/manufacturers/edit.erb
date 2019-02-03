@@ -1,0 +1,29 @@
+<h2>Edit Manufacturer</h2>
+<form action="/manufacturers/<%= @manufacturer.id %>" method="post">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= @manufacturer.name %>" autofocus/>
+    </div>
+
+    <div class="form-el">
+      <label for="last_name">Contact details:</label>
+      <input type="text" name="contact" id="contact" value="<%= @manufacturer.contact%>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="age">Cost:</label>
+      <input type="number" name="cost" id="cost" value="<%= @manufacturer.cost %>"/>
+    </div>
+
+    <div class="form-el">
+      <input type="hidden" name="product_type" id="product_type" value="<%= @manufacturer.product_type %>"/>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" class="button" value="Update Manufacturer" />
+    </div>
+
+  </div>
+</form>

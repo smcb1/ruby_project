@@ -1,5 +1,5 @@
 <h2>Edit Product</h2>
-<form method="POST" action="/products/<%= @product.id %>">
+<form action="/products/<%= @product.id %>" method="post">
   <div class="form-wrapper">
 
     <div class="form-el">
@@ -12,16 +12,21 @@
       <input type="text" name="description" id="description" value="<%= @product.description%>"/>
     </div>
 
-
-
     <div class="form-el">
       <label for="age">Price:</label>
       <input type="number" name="price" id="price" value="<%= @product.price %>"/>
     </div>
 
     <div class="form-el">
-      <input type="submit" value="Update Product" />
-      <progress value="0" max="100">0%</progress>
+      <input type="hidden" name="product_type" id="product_type" value="<%= @product.product_type %>"/>
+    </div>
+
+    <div class="form-el">
+      <input type="hidden" name="manufacturer_id" id="manufacturer_id" value="<%= @product.manufacturer_id %>"/>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" class="button" value="Update Product" />
     </div>
 
   </div>

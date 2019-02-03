@@ -87,4 +87,8 @@ class Product
       return product_hash.map { |p| Product.new(p) }
     end
 
+    def manufacturer_name(id)
+      sql = "SELECT m.name FROM manufacturer "
+    end
+
   end

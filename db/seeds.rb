@@ -47,7 +47,7 @@ manufacturer_4.save
 
 product_1 = Product.new({
   "name" => "Goodtime II",
-  "manufacturer_id" => 1,
+  "manufacturer_id" => "1",
   "product_type" => "Banjo",
   "description" => "Deering Goodtime II 5 string Banjo. Handmade in the USA.",
   "price" => "1500",
@@ -59,7 +59,7 @@ product_1.save
 
 product_2 = Product.new({
   "name" => "The Chief",
-  "manufacturer_id" => 2,
+  "manufacturer_id" => "2",
   "product_type" => "Banjo",
   "description" => "Osborne Chief 5 string Banjo. Handmade in the USA.",
   "price" => "1999",
@@ -70,7 +70,7 @@ product_2.save
 
 product_3 = Product.new({
   "name" => "Elixir Strings",
-  "manufacturer_id" => 3,
+  "manufacturer_id" => "3",
   "product_type" => "Strings",
   "description" => "Elixir strings for 5 string Banjo. Made in Germany",
   "price" => "9.99",
@@ -82,7 +82,7 @@ product_3.save
 
 product_4 = Product.new({
   "name" => "Snuffy Jenkins",
-  "manufacturer_id" => 4,
+  "manufacturer_id" => "4",
   "product_type" => "Bridge",
   "description" => "Snuffy Jenkins oak wood bridge for 5 string Banjo. Handmade in the USA",
   "price" => "39.99",

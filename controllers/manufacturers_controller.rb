@@ -22,10 +22,15 @@ get '/manufacturers/:id' do
   erb(:"manufacturers/show")
 end
 
+get '/manufacturers/:id/edit' do
+  @product = Product.all
+  @manufacturer = Manufacturer.find(params['id'])
+  erb(:"manufacturers/edit")
+end
+
 post '/manufacturers/:id' do
   manufacturer = Manufacturer.new(params).update
-  # manufacturer.update
-  redirect to "/manufacturers"
+  redirect to "/manufacturers/#{params['id']}"
 end
 
 post '/manufacturers/:id/delete' do

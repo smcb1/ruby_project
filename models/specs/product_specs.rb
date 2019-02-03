@@ -22,7 +22,7 @@ class TestProduct < MiniTest::Test
     end
 
     def test_product_has_manufacturer_id()
-      assert_equal(1, @product_1.manufacturer_id.to_i)
+      assert_equal(1, @product_1.manufacturer_id)
     end
 
     def test_product_has_product_type()

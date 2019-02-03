@@ -1,10 +1,6 @@
 body {
-font-family: 'PT Sans', sans-serif;
-}
-
-
-* {
-  box-sizing: border-box; /* Force Flex to take all BOX model size into account */
+  padding: 30px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 #flex-container {
@@ -12,7 +8,26 @@ font-family: 'PT Sans', sans-serif;
   flex-wrap: wrap;
 }
 
-.item { /* .Class */
+#menu {
+  width: 220px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.menu-item {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.landing{
+  text-align: center;
+}
+
+#logo {
+  text-align: center;
+}
+
+.item {
   background-color: #0084b4;
   color: white;
   padding: 10px;
@@ -24,7 +39,7 @@ font-family: 'PT Sans', sans-serif;
   background-color: #0084b4;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
