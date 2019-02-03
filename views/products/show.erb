@@ -1,0 +1,11 @@
+<h2>Product Details:</h2>
+<ul>
+  <li><h3>Name:</h3><%= @product.name %></li>
+  <li><h3>Product Type:</h3> <%= @product.product_type %></li>
+  <li><h3>Manufacturer:</h3> <%= @product.manufacturer_id %></li>
+  <li><h3>Description:</h3><%= @product.description %></li>
+  <li><h3>Price:</h3> £<%= @product.price %></li>
+</ul>
+
+<a href="/products/<%= @product.id %>/edit" class="button">Edit</a>
+<form action="/products/<%= @product.id %>/delete" class="button" method="POST"><input type="submit" value="Delete"></form>

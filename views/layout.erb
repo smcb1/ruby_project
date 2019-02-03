@@ -5,30 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-<link rel="stylesheet" href="./css/styles.css">
-  <title>Simon's Banjos</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Banjo Heaven</title>
 </head>
 <body>
 
-  <main class="flex flex--row">
-    <nav>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/products">Products</a>
-        </li>
-        <li>
-          <a href="/manufacturers">Manufacturers</a>
-        </li>
-        <li>
-          <a href="/stocks">Inventory</a>
-        </li>
-      </ul>
-    </nav>
+  <div id="flex-container">
+    <div class="item">
+      <a href="/">Home</a>
+    </div>
+    <div class="item">
+      <a href="/products">Products</a>
+    </div>
+    <div class="item">
+      <a href="/manufacturers">Manufacturers</a>
+    </div>
+    <div class="item">
+      <a href="/inventory">Inventory</a>
+    </div>
+  </div>
 
   <%= yield %>
-
 </body>
 </html>

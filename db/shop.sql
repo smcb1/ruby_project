@@ -7,7 +7,8 @@ CREATE TABLE manufacturers
   name VARCHAR(255) not null,
   product_type VARCHAR(255) not null,
   contact VARCHAR(255) not null,
-  cost FLOAT not null
+  cost FLOAT not null,
+  url VARCHAR(255)
 );
 
 CREATE TABLE products
@@ -18,5 +19,6 @@ CREATE TABLE products
   product_type VARCHAR(255) not null,
   description TEXT not null,
   price FLOAT not null,
-  quantity INT4 not null
+  quantity INT4 not null,
+  url VARCHAR(255)
 );

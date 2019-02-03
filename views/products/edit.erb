@@ -1,0 +1,28 @@
+<h2>Edit Product</h2>
+<form method="POST" action="/products/<%= @product.id %>">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= @product.name %>" autofocus/>
+    </div>
+
+    <div class="form-el">
+      <label for="last_name">Description:</label>
+      <input type="text" name="description" id="description" value="<%= @product.description%>"/>
+    </div>
+
+
+
+    <div class="form-el">
+      <label for="age">Price:</label>
+      <input type="number" name="price" id="price" value="<%= @product.price %>"/>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" value="Update Product" />
+      <progress value="0" max="100">0%</progress>
+    </div>
+
+  </div>
+</form>

@@ -1,0 +1,12 @@
+<h2>Manufacturer Details:</h2>
+
+<h3><%= @manufacturer.name %></h3>
+
+<ul>
+  <li><h3>Product Type:</h3> <%= @manufacturer.product_type %></li>
+  <li><h3>Contact:</h3><%= @manufacturer.contact %></li>
+  <li><h3>Cost:</h3> £<%= @manufacturer.cost %></li>
+</ul>
+
+<a href="/manufacturers/<%= @manufacturer.id %>/edit" class="button">Edit</a>
+<form action="/manufacturers/<%= @manufacturer.id %>/delete" class="button" method="POST"><input type="submit" value="Delete"></form>

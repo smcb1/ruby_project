@@ -1,0 +1,41 @@
+<h1>Add a new product:</h1>
+<form action="/products" method="post">
+  <div class="form-wrapper">
+    <div class="form-el">
+    <label>
+      Select a Product:
+      <select name="product_type">
+        <option value="Banjo">Banjo</option>
+        <option value="Strings">Strings</option>
+        <option value="Bridge">Bridge</option>
+        <option value="Tone Ring">Tone Ring</option>
+        <option value="Picks">Picks</option>
+      </select>
+    </label>
+  </div>
+
+    <div class="form-el">
+      <label for="name">Product Name:</label>
+      <input type="text" name="name" id="name" autofocus/>
+    </div>
+
+    <div class="form-el">
+      <label for="description">Description:</label>
+      <input type="text" name="description" id="description"/>
+    </div>
+
+    <div class="form-el">
+      <label for="price">Price:</label>
+      <input type="text" name="price" id="price"/>
+    </div>
+
+
+    <div class="form-el">
+      <label for="quantity">Quantity:</label>
+      <input type="text" name="quantity" id="quantity"/>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" class="button" value="Add Product"/>
+    </div>
+  </div>

@@ -4,21 +4,23 @@
   <tr>
     <th>Name</th>
     <th></th>
-    <th>Description</th>
+    <th>Product Type</th>
     <th></th>
-    <th>Price</th>
+    <!-- <th>Price</th>
     <th></th>
-    <th>Quantity</th>
+    <th>Quantity</th> -->
   </tr>
   <% for product in @products %>
   <tr>
+
     <td><a href="/products/<%= product.id %>"><%= product.name %></a></td>
     <td>|</td>
-    <td><%= product.description %></td>
-    <td>|</td>
-    <td>£<%= product.price %></td>
-    <td>|</td>
-    <td><%= product.quantity %></td>
+    <td><%= product.product_type %></td>
+    <!-- <td>|</td> -->
+    <!-- <td>£<%= product.price %></td> -->
+    <!-- <td>|</td> -->
+    <!-- <td><img src="<%= product.url %>" alt="Banjo picture"></td> -->
   </tr>
   <% end %>
+  <p><a href="products/new" class="button">Add a new product here</a></p>
 </table>

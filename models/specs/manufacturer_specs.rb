@@ -27,7 +27,7 @@ class TestManufacturer < MiniTest::Test
     end
 
     def test_manufacturer_has_cost()
-      assert_equal(1399, @manufacturer_1.cost)
+      assert_equal(1399, @manufacturer_1.cost.to_f)
     end
 
 end

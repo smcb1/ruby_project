@@ -1,7 +1,62 @@
 body {
-
-background-color: #EEEEEE;
 font-family: 'PT Sans', sans-serif;
-/*color: #38A1F3;*/
+}
 
+
+* {
+  box-sizing: border-box; /* Force Flex to take all BOX model size into account */
+}
+
+#flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item { /* .Class */
+  background-color: #0084b4;
+  color: white;
+  padding: 10px;
+  border: 2px solid #ffffff8c;
+  width: 50%;
+}
+
+.button {
+  background-color: #0084b4;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 1px;
+  cursor: pointer;
+}
+
+.form-el {
+  margin: 10px 0;
+}
+
+.form-wrapper .form-el input[type="submit" i] {
+  margin-left: 180px;
+}
+
+.form-wrapper .form-el label {
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+  width: 160px;
+  margin: 0 1em 0 0;
+}
+
+@media all and (max-width: 750px) {
+  .item {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .item {
+    width: 100%;
+  }
 }
