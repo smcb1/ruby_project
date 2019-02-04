@@ -2,16 +2,16 @@ require_relative( '../db/sql_runner' )
 
 class Product
 
-  attr_accessor(:name, :manufacturer_id, :product_type, :description, :price, :quantity, :url)
+  attr_accessor(:category_id, :manufacturer_id, :product_name, :description, :list_price, :quantity, :url)
   attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @name = options['name']
-    @manufacturer_id = options['manufacturer_id']
-    @product_type = options['product_type']
+    @category_id = options['category_id'].to_i
+    @manufacturer_id = options['manufacturer_id'].to_i
+    @product_name = options['product_name']
     @description = options['description']
-    @price = options['price'].to_s
+    @list_price = options['price'].to_f
     @quantity = options['quantity'].to_i
     @url = options['url'].to_s
   end
@@ -19,11 +19,11 @@ class Product
   def save()
     sql = "INSERT INTO products
     (
-      name,
+      category_id,
       manufacturer_id,
-      product_type,
+      product_name,
       description,
-      price,
+      list_price,
       quantity,
       url
     )
@@ -32,7 +32,7 @@ class Product
       $1, $2, $3, $4, $5, $6, $7
     )
     RETURNING id;"
-    values = [@name, @manufacturer_id, @product_type, @description, @price, @quantity, @url]
+    values = [@category_id, @manufacturer_id, @product_name, @description, @list_price, @quantity, @url]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -55,25 +55,25 @@ class Product
     sql = "UPDATE products
     SET
     (
-      name,
+      category_id,
       manufacturer_id,
-      product_type,
+      product_name,
       description,
-      price,
+      list_price,
       quantity,
       url
       ) =
       (
         $1, $2, $3, $4, $5, $6, $7
       )
-      WHERE id = $8"
-      values = [@name, @manufacturer_id, @product_type, @description, @price, @quantity, @url, @id]
+      WHERE id = $8;"
+      values = [@category_id, @manufacturer_id, @product_name, @description, @list_price, @quantity, @url]
       SqlRunner.run(sql, values)
     end
 
     def delete()
       sql = "DELETE FROM products
-      WHERE id = $1"
+      WHERE id = $1;"
       values = [@id]
       SqlRunner.run(sql, values)
     end
@@ -87,8 +87,17 @@ class Product
       return product_hash.map { |p| Product.new(p) }
     end
 
-    def manufacturer_name(id)
-      sql = "SELECT m.name FROM manufacturer "
+    def get_category(id)
+      sql = "SELECT categories.category_type
+      FROM categories WHERE category_id = $1;"
+      values = [@id]
+      return SqlRunner.run(sql, values)
+    end
+
+    def get_manufacturer(id)
+      sql = "SELECT manufacturers.contact_name 
+      FROM manufacturers WHERE manufacturer_id = $1;"
+      values = [@id]
     end
 
   end

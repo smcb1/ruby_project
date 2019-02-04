@@ -7,27 +7,22 @@ class TestManufacturer < MiniTest::Test
 
   def setup()
     @manufacturer_1 = Manufacturer.new({
-      "name" => "Nashville Banjo Company",
-      "product_type" => "Banjo",
-      "contact" => "1 Wood Drive. Nashville, Tenessee. USA",
-      "cost" => 1399
+      "contact_name" => "Nashville Banjo Company",
+      "contact_address" => "1 Wood Drive. Nashville, Tenessee. USA",
+      "list_cost" => 1399
       })
     end
 
-    def test_manufacturer_has_name()
-      assert_equal("Nashville Banjo Company", @manufacturer_1.name)
+    def test_manufacturer_has_contact_name()
+      assert_equal("Nashville Banjo Company", @manufacturer_1.contact_name)
     end
 
-    def test_manufacturer_has_product_type()
-      assert_equal("Banjo", @manufacturer_1.product_type)
+    def test_manufacturer_has_contact_address()
+      assert_equal("1 Wood Drive. Nashville, Tenessee. USA", @manufacturer_1.contact_address)
     end
 
-    def test_manufacturer_has_contact()
-      assert_equal("1 Wood Drive. Nashville, Tenessee. USA", @manufacturer_1.contact)
-    end
-
-    def test_manufacturer_has_cost()
-      assert_equal(1399, @manufacturer_1.cost.to_f)
+    def test_manufacturer_has_list_cost()
+      assert_equal(1399, @manufacturer_1.list_cost.to_f)
     end
 
 end

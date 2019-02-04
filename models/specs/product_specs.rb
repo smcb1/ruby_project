@@ -7,9 +7,9 @@ class TestProduct < MiniTest::Test
 
   def setup()
     @product_1 = Product.new({
-      "name" => "Nashville",
-      "manufacturer_id" => 1,
-      "product_type" => "Banjo",
+      "product_name" => "Nashville",
+      "manufacturer_id" => "1",
+      "category_id" => "1",
       "description" => "Nashville 5 string Banjo. Handmade in the USA.",
       "price" => 1500,
       "quantity" => 5,
@@ -18,7 +18,7 @@ class TestProduct < MiniTest::Test
     end
 
     def test_product_has_name()
-      assert_equal("Nashville", @product_1.name)
+      assert_equal("Nashville", @product_1.product_name)
     end
 
     def test_product_has_manufacturer_id()
@@ -26,7 +26,7 @@ class TestProduct < MiniTest::Test
     end
 
     def test_product_has_product_type()
-      assert_equal("Banjo", @product_1.product_type)
+      assert_equal(1, @product_1.category_id)
     end
 
     def test_product_has_description()
@@ -34,7 +34,7 @@ class TestProduct < MiniTest::Test
     end
 
     def test_product_has_price()
-      assert_equal(1500, @product_1.price.to_f)
+      assert_equal(1500, @product_1.list_price.to_f)
     end
 
     def test_product_has_quantity()
