@@ -1,35 +1,27 @@
 <h1>Add a new manufacturer:</h1>
 <form action="/manufacturers" method="post">
   <div class="form-wrapper">
-    <div class="form-el">
-      <label>
-        Select a Product:
-        <select name="product_type">
-          <option value="Banjo">Banjo</option>
-          <option value="Strings">Strings</option>
-          <option value="Bridge">Bridge</option>
-          <option value="Tone Ring">Tone Ring</option>
-          <option value="Picks">Picks</option>
-        </select>
-      </label>
-    </div>
-
-    <div class="form-el">
+    <div>
       <label for="name">Manufacturer Name:</label>
-      <input type="text" name="name" id="name" autofocus required/>
+      <input type="text" name="contact_name" id="name" autofocus required/>
     </div>
 
-    <div class="form-el">
-      <label for="price">Contact:</label>
-      <input type="text" name="contact" id="contact" required/>
+    <div>
+      <label for="price">Address:</label>
+      <input type="text" name="contact_address" id="contact_address" required/>
     </div>
 
-    <div class="form-el">
+    <div>
+      <label for="price">Telephone number:</label>
+      <input type="text" name="contact_number" id="contact_number" required/>
+    </div>
+
+    <div>
       <label for="quantity">Cost:</label>
-      <input type="text" name="cost" id="cost" required/>
+      <input type="text" name="list_cost" id="list_cost" required/>
     </div>
 
-    <div class="form-el">
+    <div>
       <input type="submit" class="button" value="Add Manufacturer"/>
     </div>
   </div>

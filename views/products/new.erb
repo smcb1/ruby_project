@@ -4,47 +4,48 @@
     <div>
       <label>
         Select a Manufacturer:
-        <select id="manufacturer_id" name="manufacturer_id">
-          <% @manufacturer.each do |m| %>
-          <option value =<%= maunfacturer.id %>><% manufacturer.name %></option>
+        <select id="manufacturer_id" name="manufacturer_id" autofocus >
+          <% for manufacturer in @manufacturers %>
+          <option value="<%= manufacturer.id %>"><%= manufacturer.contact_name %></option>
           <% end %>
-        </label>
-      </div>
-
-      <div>
-        <label>
-          Select a Product:
-          <select id="product_type" name="product_type">
-            <option value="Banjo">Banjo</option>
-            <option value="Strings">Strings</option>
-            <option value="Bridge">Bridge</option>
-            <option value="Tone Ring">Tone Ring</option>
-            <option value="Picks">Picks</option>
-          </select>
-        </label>
-      </div>
-
-      <div>
-        <label for="name">Product Name:</label>
-        <input type="text" name="name" id="name" autofocus required/>
-      </div>
-
-      <div>
-        <label for="description">Description:</label>
-        <input type="text" name="description" id="description" required/>
-      </div>
-
-      <div>
-        <label for="price">Price:</label>
-        <input type="text" name="price" id="price" required/>
-      </div>
-
-      <div>
-        <label for="quantity">Quantity:</label>
-        <input type="text" name="quantity" id="quantity" required/>
-      </div>
-
-      <div>
-        <input type="submit" class="button" value="Add Product"/>
-      </div>
+        </select>
+      </label>
     </div>
+
+    <label>
+      Select a Product Category:
+      <select id="category_type" name="category_type">
+        <% for category in @categories %>
+        <option value="<%= category.id %>"><%= category.category_type %></option>
+        <% end %>
+      </select>
+    </label>
+  </div>
+
+  <input type="hidden" name="category_id" id="category_id" value="<%= category.id %>">
+  <input type="hidden" name="manufacturer_id" id="manufacturer_id" value="<%= manufacturer.id %>">
+
+  <div>
+    <label for="product_name">Product Name:</label>
+    <input type="text" name="product_name" id="product_name" required/>
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" required/>
+  </div>
+
+  <div>
+    <label for="list_price">Price:</label>
+    <input type="text" name="list_price" id="list_price" required/>
+  </div>
+
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="text" name="quantity" id="quantity" required/>
+  </div>
+
+  <div>
+    <input type="submit" class="button" value="Add Product"/>
+  </div>
+</div>

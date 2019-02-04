@@ -67,7 +67,7 @@ class Product
         $1, $2, $3, $4, $5, $6, $7
       )
       WHERE id = $8;"
-      values = [@category_id, @manufacturer_id, @product_name, @description, @list_price, @quantity, @url]
+      values = [@category_id, @manufacturer_id, @product_name, @description, @list_price, @quantity, @url, @id]
       SqlRunner.run(sql, values)
     end
 
@@ -87,17 +87,18 @@ class Product
       return product_hash.map { |p| Product.new(p) }
     end
 
-    def get_category(id)
+    def get_category()
       sql = "SELECT categories.category_type
-      FROM categories WHERE category_id = $1;"
+      FROM categories WHERE categories.id = $1;"
       values = [@id]
       return SqlRunner.run(sql, values)
     end
 
-    def get_manufacturer(id)
-      sql = "SELECT manufacturers.contact_name 
-      FROM manufacturers WHERE manufacturer_id = $1;"
+    def get_manufacturer()
+      sql = "SELECT manufacturers.contact_name
+      FROM manufacturers WHERE manufacturer.id = $1;"
       values = [@id]
+      return SqlRunner.run(sql, values)
     end
 
   end

@@ -11,11 +11,9 @@
   <% for manufacturer in @manufacturers %>
   <tr>
     <!-- <td><img src="<%= manufacturer.url %>"><br/></td> -->
-    <td><a href="/manufacturers/<%= manufacturer.id %>"><%= manufacturer.name %></a></td>
+    <td><a href="/manufacturers/<%= manufacturer.id %>"><%= manufacturer.contact_name %></a></td>
     <td>|</td>
-    <td><%= manufacturer.product_type %></td>
-    <td>|</td>
-    <!-- <td>£<%= manufacturer.cost %></td>
+    <!-- <td>£<%= manufacturer.list_cost %></td>
     <td>|</td> -->
   </tr>
   <% end %>

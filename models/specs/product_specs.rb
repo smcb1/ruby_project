@@ -25,8 +25,8 @@ class TestProduct < MiniTest::Test
       assert_equal(1, @product_1.manufacturer_id)
     end
 
-    def test_product_has_product_type()
-      assert_equal(1, @product_1.category_id)
+    def test_get_category()
+      assert_equal("Banjo", @product_1.get_category.first)
     end
 
     def test_product_has_description()
@@ -34,7 +34,7 @@ class TestProduct < MiniTest::Test
     end
 
     def test_product_has_price()
-      assert_equal(1500, @product_1.list_price.to_f)
+      assert_equal(1500, @product_1.list_price)
     end
 
     def test_product_has_quantity()
@@ -45,4 +45,4 @@ class TestProduct < MiniTest::Test
       assert_equal("images/nashville_banjo.jpg", @product_1.url.to_s)
     end
 
-end
+  end

@@ -7,7 +7,7 @@ class Category
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
-    @category_type = options['category_type']
+    @category_type = options['category_type'].to_s
   end
 
   def save()

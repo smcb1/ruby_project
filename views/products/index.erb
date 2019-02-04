@@ -11,10 +11,10 @@
     <img src="<%= product.url %>" class="prod_img" alt="Banjo picture">
   </div>
   <div class="item">
-   <p>Type:  <%= product.product_type %> </p>
+   <p>Type:  <%= product.get_category %> </p>
   </div>
   <div class="item">
-    <p>Cost:  £<%= product.price %> </p>
+    <p>Cost:  £<%= product.list_price %> </p>
   </div>
   <% end %>
 </div>

@@ -1,11 +1,12 @@
 <h2>Manufacturer Details:</h2>
 
-<h3><%= @manufacturer.name %></h3>
+<h3><%= @manufacturer.contact_name %></h3>
 
 <ul>
-  <li><h3>Product Type:</h3> <%= @manufacturer.product_type %></li>
-  <li><h3>Contact:</h3><%= @manufacturer.contact %></li>
-  <li><h3>Cost:</h3> £<%= @manufacturer.cost %></li>
+  <li><h3>Company name:</h3><%= @manufacturer.contact_name %></li>
+  <li><h3>Address:</h3><%= @manufacturer.contact_address %></li>
+  <li><h3>Telephone:</h3><%= @manufacturer.contact_number %></li>
+  <li><h3>Unit Cost:</h3> £<%= @manufacturer.list_cost %></li>
 </ul>
 
 <a href="/manufacturers/<%= @manufacturer.id %>/edit" class="button">Edit</a>

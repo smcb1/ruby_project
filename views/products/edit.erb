@@ -2,30 +2,31 @@
 <form action="/products/<%= @product.id %>" method="post">
   <div class="form-wrapper">
 
-    <div class="form-el">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" value="<%= @product.name %>" autofocus/>
+    <input type="hidden" name="product_id" id="product_id" value="<%= @product.id %>"/>
+    <input type="hidden" name="manufacturer_id" id="manufacturer_id" value="<%= @product.manufacturer_id %>"/>
+    <input type="hidden" name="category_id" id="category_id" value="<%= @product.category_id %>"/>
+
+    <div>
+      <label for="product_name">Name:</label>
+      <input type="text" name="product_name" id="product_name" value="<%= @product.product_name %>" autofocus/>
     </div>
 
-    <div class="form-el">
+    <div>
       <label for="last_name">Description:</label>
       <input type="text" name="description" id="description" value="<%= @product.description%>"/>
     </div>
 
-    <div class="form-el">
+    <div>
       <label for="age">Price:</label>
-      <input type="number" name="price" id="price" value="<%= @product.price %>"/>
+      <input type="number" name="list_price" id="list_price" value="<%= @product.list_price %>"/>
     </div>
 
-    <div class="form-el">
-      <input type="hidden" name="product_type" id="product_type" value="<%= @product.product_type %>"/>
+    <div>
+      <label for="age">Quantity:</label>
+      <input type="number" name="quantity" id="quantity" value="<%= @product.quantity %>"/>
     </div>
 
-    <div class="form-el">
-      <input type="hidden" name="manufacturer_id" id="manufacturer_id" value="<%= @product.manufacturer_id %>"/>
-    </div>
-
-    <div class="form-el">
+    <div>
       <input type="submit" class="button" value="Update Product" />
     </div>
 

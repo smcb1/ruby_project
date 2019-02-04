@@ -77,7 +77,7 @@ product_1 = Product.new({
   "manufacturer_id" => 1,
   "product_name" => "Goodtime II",
   "description" => "Deering Goodtime II 5 string Banjo. Handmade in the USA.",
-  "list_price" => 1500,
+  "list_price" => "1500",
   "quantity" => 5,
   "url" => "images/deering_banjo.jpg"
 })
@@ -89,7 +89,7 @@ product_2 = Product.new({
   "manufacturer_id" => 2,
   "product_name" => "The Chief",
   "description" => "Osborne Chief 5 string Banjo. Handmade in the USA.",
-  "list_price" => 1999,
+  "list_price" => "1999",
   "quantity" => 2,
   "url" => "images/osborne_chief.jpg"
 })
@@ -101,7 +101,7 @@ product_3 = Product.new({
   "product_name" => "Elixir Strings",
   "description" => "Elixir strings for 5 string Banjo. Made in Germany",
   "list_price" => 9.99,
-  "quantity" => 230,
+  "quantity" => "230",
   "url" => "images/elixir_strings.jpg"
 
 })
@@ -112,7 +112,7 @@ product_4 = Product.new({
   "manufacturer_id" => 4,
   "product_name" => "Snuffy Banjo Bridge",
   "description" => "Snuffy Jenkins oak wood bridge for 5 string Banjo. Handmade in the USA",
-  "list_price" => 39.99,
+  "list_price" => "39.99",
   "quantity" => 20,
   "url" => "images/snuffy_bridge.jpg"
 })
@@ -123,7 +123,7 @@ product_5 = Product.new({
   "manufacturer_id" => 1,
   "product_name" => "Deering Banjo Strings",
   "description" => "Deering's high quality Banjo Strings. Handmade in the USA",
-  "list_price" => 9.99,
+  "list_price" => "9.99",
   "quantity" => 200,
   "url" => "images/deering_strings.jpg"
 })
