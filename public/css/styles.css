@@ -41,7 +41,7 @@ body {
 }
 
 #menu {
-  width: 220px;
+  width: 200px;
   display: flex;
   margin: 0 auto;
 }
@@ -62,11 +62,11 @@ body {
 }
 
 .item {
-  background-color: #747D84;
-  color: white;
-  padding: 10px;
-  border: 2px solid #ffffff8c;
-  width: 20%;
+  background-color: white;
+  color: black;
+  padding: 3px;
+  border: 2px solid #ddd;
+  width: 24%;
 }
 
 .button {

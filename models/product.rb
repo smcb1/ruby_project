@@ -11,7 +11,7 @@ class Product
     @manufacturer_id = options['manufacturer_id'].to_i
     @product_name = options['product_name']
     @description = options['description']
-    @list_price = options['price'].to_f
+    @list_price = options['list_price'].to_f
     @quantity = options['quantity'].to_i
     @url = options['url'].to_s
   end
@@ -91,14 +91,16 @@ class Product
       sql = "SELECT categories.category_type
       FROM categories WHERE categories.id = $1;"
       values = [@id]
-      return SqlRunner.run(sql, values)
+      results = SqlRunner.run(sql, values)
+      return results.values
     end
 
     def get_manufacturer()
       sql = "SELECT manufacturers.contact_name
-      FROM manufacturers WHERE manufacturer.id = $1;"
+      FROM manufacturers WHERE manufacturers.id = $1;"
       values = [@id]
-      return SqlRunner.run(sql, values)
+      results = SqlRunner.run(sql, values)
+      return results.values
     end
 
   end

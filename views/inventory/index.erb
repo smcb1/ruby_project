@@ -1,23 +1,18 @@
-<h1>Inventory</h1>
+<h1>All Products in stock</h1>
 
-<!-- <table>
-  <tr>
-    <th>Company</th>
-    <!-- <th>|</th>
-    <th>Contact</th>
-    <th>|</th>
-    <th>Cost</th> -->
-  </tr>
-  <% for manufacturer in @manufacturers %>
-  <tr>
-    <!-- <td><img src="<%= manufacturer.url %>"><br/></td> -->
-    <td><a href="/manufacturers/<%= manufacturer.id %>"><%= manufacturer.name %></a></td>
-    <td>|</td>
-    <!-- <td><%= manufacturer.contact %></td>
-    <td>|</td>
-    <td>£<%= manufacturer.cost %></td>
-    <td>|</td> -->
-  </tr>
+<div id="flex-container">
+  <% for product in @products %>
+  <div class="item">
+    <a href="/products/<%= product.id %>"><%= product.product_name %></a>
+  </div>
+  <div class="item">
+   <p><%= product.get_manufacturer %> </p>
+  </div>
+  <div class="item">
+   <p><%= product.get_category %> </p>
+  </div>
+  <div class="item">
+    <p>Quantity:<%= product.quantity %> </p>
+  </div>
   <% end %>
-  <p><a href="manufacturers/new">Add a new supplier here</a></p>
-</table> -->
+</div>

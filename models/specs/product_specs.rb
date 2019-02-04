@@ -11,7 +11,7 @@ class TestProduct < MiniTest::Test
       "manufacturer_id" => "1",
       "category_id" => "1",
       "description" => "Nashville 5 string Banjo. Handmade in the USA.",
-      "price" => 1500,
+      "list_price" => 1500,
       "quantity" => 5,
       "url" => "images/nashville_banjo.jpg"
       })
@@ -26,14 +26,14 @@ class TestProduct < MiniTest::Test
     end
 
     def test_get_category()
-      assert_equal("Banjo", @product_1.get_category.first)
+      assert_equal("Banjo", @product_1.get_category)
     end
 
     def test_product_has_description()
       assert_equal("Nashville 5 string Banjo. Handmade in the USA.", @product_1.description)
     end
 
-    def test_product_has_price()
+    def test_list_price()
       assert_equal(1500, @product_1.list_price)
     end
 

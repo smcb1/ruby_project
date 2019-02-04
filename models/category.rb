@@ -5,9 +5,9 @@ class Category
   attr_accessor :category_type
   attr_reader :id
 
-  def initialize( options )
+  def initialize(options)
     @id = options['id'].to_i if options['id']
-    @category_type = options['category_type'].to_s
+    @category_type = options['category_type']
   end
 
   def save()

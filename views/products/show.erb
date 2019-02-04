@@ -3,7 +3,8 @@
   <li><h3>Name:</h3><%= @product.product_name %></li>
   <li><h3>Description:</h3><%= @product.description %></li>
   <li><h3>Price:</h3> £<%= @product.list_price %></li>
+  <li><h3>Quantity:</h3><%= @product.quantity %></li>
 </ul>
 
-<a href="/products/<%= @product.id %>/edit" class="button">Edit</a>
-<form action="/products/<%= @product.id %>/delete" class="button" method="post"><input type="submit" value="Delete"></form>
+<button class="button"><span><a href="/products/<%= @product.id %>/edit">Edit</a></span></button>
+<button class="button"><span><a href="/products/<%= @product.id %>/delete" method="post">Delete Product</a></span></button>
