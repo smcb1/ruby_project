@@ -34,7 +34,7 @@ class Manufacturer
   end
 
   def self.all()
-    sql = "SELECT * FROM manufacturers;"
+    sql = "SELECT * FROM manufacturers ORDER BY manufacturers.contact_name;"
     results = SqlRunner.run( sql )
     return results.map { |hash| Manufacturer.new( hash ) }
   end

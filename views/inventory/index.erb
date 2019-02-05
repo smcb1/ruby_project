@@ -1,18 +1,24 @@
 <h1>All Products in stock</h1>
 
-<div id="flex-container">
+<div id="flex-grid-thirds">
   <% for product in @products %>
-  <div class="item">
+  <div class="row">
     <a href="/products/<%= product.id %>"><%= product.product_name %></a>
   </div>
-  <div class="item">
-   <p><%= product.get_manufacturer %> </p>
+  <div class="row">
+    <p><%= product.get_manufacturer %> </p>
   </div>
-  <div class="item">
-   <p><%= product.get_category %> </p>
+  <div class="row">
+    <p><%= product.get_category %> </p>
   </div>
-  <div class="item">
-    <p>Quantity: <%= product.quantity %> </p>
+  <div class="row">
+    <% if product.quantity <= 5 %>
+    <p class="red">Quantity: <%= product.quantity %></p>
+    <% elsif product.quantity <= 10 %>
+    <p class="orange">Quantity: <%= product.quantity %></p>
+    <% else %>
+    <p class="green">Quantity: <%= product.quantity %></p>
+    <% end %>
   </div>
   <% end %>
 </div>
