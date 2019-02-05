@@ -1,19 +1,21 @@
 <h1>Products</h1>
 
-<button class="button"><span><a href="/categories/new">Add new category</a></span></button>
-<button class="button"><span><a href="/products/new">Add new product</a></span></button>
+<button class="button"><span><a href="/categories/new" style="color:white;">Add new category</a></span></button>
+<button class="button"><span><a href="/products/new" style="color:white;">Add new product</a></span></button>
 
-<div id="flex-container">
-  <% for product in @products %>
-  <div class="item">
-    <a href="/products/<%= product.id %>"><%= product.product_name %></a>
+<div class="flex-container-thirds">
+  <div class="box">
+    <% for product in @products %>
+    <div class="col">
+      <a href="/products/<%= product.id %>"><%= product.product_name %></a>
+    </div>
+    <div class="col">
+      <p>Type:  <%= product.get_category %> </p>
+    </div>
+    <div class="col">
+      <p>Price:  £<%= product.list_price %> </p>
+    </div>
+    <br/>
+    <% end %>
   </div>
-  <div class="item">
-    <p>Type:  <%= product.get_category %> </p>
-  </div>
-  <div class="item">
-    <p>Price:  £<%= product.list_price %> </p>
-  </div>
-  <br/>
-  <% end %>
 </div>

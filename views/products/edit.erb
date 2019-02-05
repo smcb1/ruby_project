@@ -3,27 +3,36 @@
   <div class="form-wrapper">
 
     <input type="hidden" name="product_id" id="product_id" value="<%= @product.id %>"/>
-    <input type="hidden" name="manufacturer_id" id="manufacturer_id" value="<%= @product.manufacturer_id %>"/>
     <input type="hidden" name="category_id" id="category_id" value="<%= @product.category_id %>"/>
+    <input type="hidden" name="manufacturer_id" id="manufacturer_id" value="<%= @product.manufacturer_id %>"/>
+
+    <label>
+      Select a Product Category:
+      <select id="category_type" name="category_type" style="color:black;">
+        <% for category in @categories %>
+        <option value="<%= category.id %>"><%= category.category_type %></option>
+        <% end %>
+      </select>
+    </label>
 
     <div>
       <label for="product_name">Name:</label>
-      <input type="text" name="product_name" id="product_name" value="<%= @product.product_name %>" autofocus/>
+      <input type="text" name="product_name" id="product_name" style="color:black;" value="<%= @product.product_name %>" autofocus/>
     </div>
 
     <div>
       <label for="last_name">Description:</label>
-      <input type="text" name="description" id="description" value="<%= @product.description%>"/>
+      <input type="text" name="description" id="description" style="color:black;" value="<%= @product.description%>"/>
     </div>
 
     <div>
       <label for="age">Price:</label>
-      <input type="number" name="list_price" id="list_price" value="<%= @product.list_price %>"/>
+      <input type="text" name="list_price" id="list_price" style="color:black;" value="<%= @product.list_price %>"/>
     </div>
 
     <div>
       <label for="age">Quantity:</label>
-      <input type="number" name="quantity" id="quantity" value="<%= @product.quantity %>"/>
+      <input type="text" name="quantity" id="quantity" style="color:black;" value="<%= @product.quantity %>"/>
     </div>
 
     <div>

@@ -4,7 +4,7 @@
     <div>
       <label>
         Select a Manufacturer:
-        <select id="manufacturer_id" name="manufacturer_id" autofocus >
+        <select id="manufacturer_id" name="manufacturer_id" style="color:black;" autofocus >
           <% for manufacturer in @manufacturers %>
           <option value="<%= manufacturer.id %>"><%= manufacturer.contact_name %></option>
           <% end %>
@@ -14,7 +14,7 @@
 
     <label>
       Select a Product Category:
-      <select id="category_type" name="category_type">
+      <select id="category_type" name="category_type" style="color:black;">
         <% for category in @categories %>
         <option value="<%= category.id %>"><%= category.category_type %></option>
         <% end %>
@@ -22,27 +22,28 @@
     </label>
   </div>
 
-  <input type="hidden" name="category_id" id="category_id" value="<%= category.id %>">
   <input type="hidden" name="manufacturer_id" id="manufacturer_id" value="<%= manufacturer.id %>">
+  <input type="hidden" name="category_id" id="category_id" value="<%= category.id %>">
+  
 
   <div>
     <label for="product_name">Product Name:</label>
-    <input type="text" name="product_name" id="product_name" required/>
+    <input type="text" name="product_name" id="product_name" style="color:black;" required/>
   </div>
 
   <div>
     <label for="description">Description:</label>
-    <input type="text" name="description" id="description" required/>
+    <input type="text" name="description" id="description" style="color:black;" required/>
   </div>
 
   <div>
     <label for="list_price">Price:</label>
-    <input type="text" name="list_price" id="list_price" required/>
+    <input type="text" name="list_price" id="list_price" style="color:black;" required/>
   </div>
 
   <div>
     <label for="quantity">Quantity:</label>
-    <input type="text" name="quantity" id="quantity" required/>
+    <input type="text" name="quantity" id="quantity" style="color:black;" required/>
   </div>
 
   <div>
