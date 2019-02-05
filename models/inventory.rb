@@ -1,6 +1,4 @@
 require_relative('../db/sql_runner')
-require('colorize')
-
 
 class Inventory
 

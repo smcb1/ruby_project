@@ -1,7 +1,7 @@
 require_relative( '../db/sql_runner' )
 
 class Category
-
+  
   attr_accessor :category_type
   attr_reader :id
 
