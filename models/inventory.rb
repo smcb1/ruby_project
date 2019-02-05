@@ -4,8 +4,6 @@ require('colorize')
 
 class Inventory
 
-  #attr_accessor (:product_id, :category_id, :manufacturer_id)
-
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @product_id = options['product_id'].to_i

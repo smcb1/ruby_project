@@ -1,22 +1,15 @@
 <h1>Products</h1>
 
-<button class="button"><span><a href="/categories/new" style="color:white;">Add new category</a></span></button>
-<button class="button"><span><a href="/products/new" style="color:white;">Add new product</a></span></button>
+<div class="row">
+  <button class="button"><a href="/products/new" style="color:white;">Add new product</a></button>
+</div>
 
-<div class="tg-wrap"><table class="tg">
-  <tr>
-    <th class="tg-0pky">Product Name:</th>
-    <th class="tg-0lax">Product Type:</th>
-    <th class="tg-0lax">List Price:</th>
-    <th class="tg-0lax"></th>
-  </tr>
+<div class="row">
   <% for product in @products %>
-  <tr>
-    <td class="tg-0lax"><a href="/products/<%= product.id %>"><%= product.product_name %></a></td>
-    <td class="tg-0lax"><p><%= product.get_category %> </p></td>
-    <td class="tg-0lax"><p>£<%= product.list_price %> </td>
-      <td class="tg-0lax"></td>
-    </tr>
-    <% end %>
-  </table>
+  <div class="col-xs-4">
+    <div class="box"><p><a href="/products/<%= product.id %>"><%= product.product_name %></a></p></div>
+    <div class="box"><p>Category: <%= product.get_category %></p></div>
+    <div class="box"><p>Cost: £<%= product.list_price %></p></div>
+  </div>
+  <% end %>
 </div>

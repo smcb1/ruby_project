@@ -3,6 +3,10 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+* {
+  box-sizing: border-box; /* Force Flex to take all BOX model size into account */
+}
+
 .header {
   background-color: #000;
   background-image: url("../images/header.jpg");
@@ -42,11 +46,6 @@ body {
   background-color: green;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: row;
-}
-
 .flex-grid-thirds {
   padding: 10px;
   display: flex;
@@ -65,11 +64,23 @@ body {
 }
 
 .item {
-  background-color: white;
-  color: black;
-  padding: 3px;
-  border: 2px solid #ddd;
-  width: 28%;
+  background-color: #white;
+  color: white;
+  padding: 10px;
+  border: 2px solid #ffffff8c;
+  width: 33%;
+}
+
+@media all and (max-width: 750px) {
+  .item {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .item {
+    width: 100%;
+  }
 }
 
 .button {
@@ -116,10 +127,3 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #2D25228c;
 }
-
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
