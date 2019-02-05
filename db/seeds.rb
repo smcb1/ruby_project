@@ -32,6 +32,16 @@ category_5 = Category.new({
 })
 category_5.save()
 
+category_6 = Category.new({
+  "category_type" => "Straps"
+})
+category_6.save()
+
+category_7 = Category.new({
+  "category_type" => "Books"
+})
+category_7.save()
+
 manufacturer_1 = Manufacturer.new({
   "contact_name" => "Deering Banjo Company",
   "contact_address" => "1 Wood Drive. Nashville, Tenessee. USA",
@@ -71,6 +81,17 @@ manufacturer_4 = Manufacturer.new({
 })
 
 manufacturer_4.save
+
+manufacturer_5 = Manufacturer.new({
+  "contact_name" => "Hal Leanard Banjo Books",
+  "contact_address" => "5 George Street. Knocksville, Kentucky. USA",
+  "contact_number" => "456 789 1234",
+  "list_cost" => "11.99",
+  "url" => "images/hal_logo.jpg"
+})
+
+manufacturer_5.save
+
 
 product_1 = Product.new({
   "category_id" => 1,
@@ -128,6 +149,17 @@ product_5 = Product.new({
   "url" => "images/deering_strings.jpg"
 })
 product_5.save
+
+product_6 = Product.new({
+  "category_id" => 7,
+  "manufacturer_id" => 5,
+  "product_name" => "Happy Truam - Learn Banjo Book",
+  "description" => "Happy Truam teaches his unique banjo stlye, Clawhammer and Scruggs Style.",
+  "list_price" => "13.99",
+  "quantity" => 200,
+  "url" => "images/happy_book.jpg"
+})
+product_6.save
 
 binding.pry
 nil

@@ -2,27 +2,32 @@
 <form action="/manufacturers/<%= @manufacturer.id %>" method="post">
   <div class="form-wrapper">
 
-    <div class="form-el">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" value="<%= @manufacturer.name %>" autofocus/>
+    <div>
+      <label for="name">Company Name:</label>
+      <input type="text" name="contact_name" id="contact_name" value="<%= @manufacturer.contact_name %>" autofocus required/>
     </div>
 
-    <div class="form-el">
-      <label for="last_name">Contact details:</label>
-      <input type="text" name="contact" id="contact" value="<%= @manufacturer.contact%>"/>
+    <div>
+      <label for="last_name">Contact address:</label>
+      <input type="text" name="contact_address" id="contact_address" value="<%= @manufacturer.contact_address%>" required/>
     </div>
 
-    <div class="form-el">
+    <div>
+      <label for="last_name">Contact telephone:</label>
+      <input type="text" name="contact_number" id="contact_number" value="<%= @manufacturer.contact_number%>" required/>
+    </div>
+
+    <div>
       <label for="age">Cost:</label>
-      <input type="number" name="cost" id="cost" value="<%= @manufacturer.cost %>"/>
+      <input type="text" name="list_cost" id="list_cost" value="<%= @manufacturer.list_cost %>"/ required>
     </div>
 
-    <div class="form-el">
-      <input type="hidden" name="product_type" id="product_type" value="<%= @manufacturer.product_type %>"/>
-    </div>
+    <!-- <div>
+      <%# <input type="hidden" name="product_type" id="product_type" value="<%= @product.get_category %>" required/> %>
+    </div> -->
 
-    <div class="form-el">
-      <input type="submit" class="button" value="Update Manufacturer" />
+    <div>
+      <input type="submit" class="button" value="Update Manufacturer" required/>
     </div>
 
   </div>
