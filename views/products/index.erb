@@ -3,19 +3,20 @@
 <button class="button"><span><a href="/categories/new" style="color:white;">Add new category</a></span></button>
 <button class="button"><span><a href="/products/new" style="color:white;">Add new product</a></span></button>
 
-<div class="flex-container-thirds">
-  <div class="box">
-    <% for product in @products %>
-    <div class="col">
-      <a href="/products/<%= product.id %>"><%= product.product_name %></a>
-    </div>
-    <div class="col">
-      <p>Type:  <%= product.get_category %> </p>
-    </div>
-    <div class="col">
-      <p>Price:  £<%= product.list_price %> </p>
-    </div>
-    <br/>
+<div class="tg-wrap"><table class="tg">
+  <tr>
+    <th class="tg-0pky">Product Name:</th>
+    <th class="tg-0lax">Product Type:</th>
+    <th class="tg-0lax">List Price:</th>
+    <th class="tg-0lax"></th>
+  </tr>
+  <% for product in @products %>
+  <tr>
+    <td class="tg-0lax"><a href="/products/<%= product.id %>"><%= product.product_name %></a></td>
+    <td class="tg-0lax"><p><%= product.get_category %> </p></td>
+    <td class="tg-0lax"><p>£<%= product.list_price %> </td>
+      <td class="tg-0lax"></td>
+    </tr>
     <% end %>
-  </div>
+  </table>
 </div>
