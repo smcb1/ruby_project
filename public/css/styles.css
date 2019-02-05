@@ -1,5 +1,5 @@
 body {
-  /* padding: 30px; */
+  padding: 30px;
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -15,7 +15,7 @@ body {
 /* The navbar container */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #2D2522;
 }
 
 /* Navbar links */
@@ -46,6 +46,14 @@ body {
   margin: 0 auto;
 }
 
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+
 .menu-item {
   display: inline-block;
   flex-grow: 1;
@@ -57,22 +65,18 @@ body {
   display: flex;
 }
 
-#logo {
-  text-align: center;
-}
-
 .item {
   background-color: white;
   color: black;
   padding: 3px;
   border: 2px solid #ddd;
-  width: 24%;
+  width: 28%;
 }
 
 .button {
   border: none;
   border-radius: 2px;
-  background-color: #747D84;
+  background-color: #2D2522;
   border: none;
   color: #FFFFFF;
   text-align: left;
@@ -111,7 +115,7 @@ body {
 
 .button a {
   float: left;
-  color: #f2f2f2;
+  color: #FFF;
   padding: 4px 6px;
   text-decoration: none;
 }
@@ -128,7 +132,7 @@ input[type=text], select {
 
 input[type=submit] {
   width: 20%;
-  background-color: #0084B4;
+  background-color: #2D2522;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -138,41 +142,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #0085C5;
+  background-color: #2D25228c;
 }
 
-/* div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-} */
-
-/* Create three unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 2px;
-}
-
-/* Left and right column */
-.column.side {
-  width: 30%;
-}
-
-/* Middle column */
-.column.middle {
-  width: 30%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 650px) {
-  .column.side, .column.middle .item {
-    width: 100%;
+@media (max-width: 400px) {
+  .flex-grid {
+    display: block;
   }
 }

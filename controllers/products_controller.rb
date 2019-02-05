@@ -27,7 +27,6 @@ get '/products/:id' do
 end
 
 get '/products/:id/edit' do
-  # @categories = Category.all
   @manufacturers = Manufacturer.all
   @product = Product.find(params['id'])
   erb(:"products/edit")

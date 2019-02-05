@@ -7,4 +7,4 @@
 </ul>
 
 <button class="button"><span><a href="/products/<%= @product.id %>/edit">Edit</a></span></button>
-<button class="button"><span><a href="/products/<%= @product.id %>/delete" method="post">Delete Product</a></span></button>
+<form action="/products/<%= @product.id %>/delete" class="button" method="POST"><input type="submit" value="Delete"></form>

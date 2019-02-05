@@ -38,7 +38,7 @@ class Product
   end
 
   def self.all()
-    sql = "SELECT * FROM products;"
+    sql = "SELECT * FROM products ORDER BY products.product_name;"
     results = SqlRunner.run(sql)
     return results.map { |h| Product.new(h) }
   end
@@ -90,17 +90,17 @@ class Product
     def get_category()
       sql = "SELECT categories.category_type
       FROM categories WHERE categories.id = $1;"
-      values = [@id]
+      values = [@category_id]
       results = SqlRunner.run(sql, values)
-      return results.values
+      return results[0]["category_type"]
     end
 
     def get_manufacturer()
       sql = "SELECT manufacturers.contact_name
       FROM manufacturers WHERE manufacturers.id = $1;"
-      values = [@id]
+      values = [@manufacturer_id]
       results = SqlRunner.run(sql, values)
-      return results.values
+      return results[0]["contact_name"]
     end
 
   end
