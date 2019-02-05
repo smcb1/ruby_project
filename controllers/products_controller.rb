@@ -28,7 +28,7 @@ end
 
 get '/products/:id/edit' do
   @manufacturers = Manufacturer.find(params['id'])
-  @categories = Category.find(params['id'])
+  @categories = Category.all
   @product = Product.find(params['id'])
   erb(:"products/edit")
 end

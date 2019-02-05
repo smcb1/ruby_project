@@ -1,12 +1,16 @@
 <h2>Product Details:</h2>
-<ul>
-  <li><h4>Name:</h4><%= @product.product_name %></li>
-  <li><h4>Product Manufacturer:</h4><a href="/manufacturers/<%= @product.manufacturer_id %>"/><%= @product.get_manufacturer %></a></li>
-  <li><h4>Category:</h4><%= @product.get_category %></li>
-  <li><h4>Description:</h4><%= @product.description %></li>
-  <li><h4>Price:</h4> £<%= @product.list_price %></li>
-  <li><h4>Quantity:</h4><%= @product.quantity %></li>
-</ul>
 
-<button class="button"><span><a href="/products/<%= @product.id %>/edit">Edit</a></span></button>
-<form action="/products/<%= @product.id %>/delete" class="button" method="POST"><input type="submit" value="Delete"></form>
+<div class="row">
+  <div class="col-xs-4">
+    <div class="box"><p><a href="/products/<%= @product.id %>"><%= @product.product_name %></a></p></div>
+    <div class="box>Product Manufacturer:<a href="/manufacturers/<%= @product.manufacturer_id %>"/><%= @product.get_manufacturer %></a></div>
+    <div class="box"><p>Category: <%= @product.get_category %></p></div>
+    <div class="box"><p><%= @product.description %></p></div>
+    <div class="box"><p>Quantity: <%= @product.quantity %></p></div>
+  </div>
+</div>
+
+<div class="row">
+  <button class="button"><a href="/products/<%= @product.id %>/edit" style="color:white;">Edit Product</a></button>
+  <form action="/products/<%= @product.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+</div>

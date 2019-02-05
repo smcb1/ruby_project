@@ -9,6 +9,6 @@ also_reload( '../models/*' )
 get '/inventory' do
   @products = Product.all()
   @manufacturers = Manufacturer.all()
-  #@categories = Category.all()
+  @categories = Category.all()
   erb (:"inventory/index")
 end
