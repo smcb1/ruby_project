@@ -46,7 +46,7 @@ manufacturer_1 = Manufacturer.new({
   "contact_name" => "Deering Banjo Company",
   "contact_address" => "1 Wood Drive. Nashville, Tenessee. USA",
   "contact_number" => "456 789 1234",
-  "list_cost" => "1399",
+  "list_cost" => "1399.99",
   "url" => "images/deering_logo.jpg"
 })
 
@@ -56,7 +56,7 @@ manufacturer_2 = Manufacturer.new({
   "contact_name" => "Osborne Chief Banjo Company",
   "contact_address" => "2356 Creek Hills. Nashville, Tennessee. USA",
   "contact_number" => "456 789 1234",
-  "list_cost" => "1599",
+  "list_cost" => "1599.99",
   "url" => "images/osborne_logo.jpg"
 })
 
@@ -83,7 +83,7 @@ manufacturer_4 = Manufacturer.new({
 manufacturer_4.save
 
 manufacturer_5 = Manufacturer.new({
-  "contact_name" => "Hal Leanard Banjo Books",
+  "contact_name" => "Hal Leonard Banjo Books",
   "contact_address" => "5 George Street. Knocksville, Kentucky. USA",
   "contact_number" => "456 789 1234",
   "list_cost" => "11.99",
@@ -98,7 +98,7 @@ product_1 = Product.new({
   "manufacturer_id" => 1,
   "product_name" => "Goodtime II",
   "description" => "Deering Goodtime II 5 string Banjo. Handmade in the USA.",
-  "list_price" => "1500",
+  "list_price" => "1599.99",
   "quantity" => 5,
   "url" => "images/deering_banjo.jpg"
 })
@@ -110,7 +110,7 @@ product_2 = Product.new({
   "manufacturer_id" => 2,
   "product_name" => "The Chief",
   "description" => "Osborne Chief 5 string Banjo. Handmade in the USA.",
-  "list_price" => "1999",
+  "list_price" => "1999.99",
   "quantity" => 2,
   "url" => "images/osborne_chief.jpg"
 })
@@ -120,8 +120,8 @@ product_3 = Product.new({
   "category_id" => 2,
   "manufacturer_id" => 3,
   "product_name" => "Elixir Strings",
-  "description" => "Elixir strings for 5 string Banjo. Made in Germany",
-  "list_price" => 9.99,
+  "description" => "Elixir strings for 5 string Banjo.",
+  "list_price" => "9.99",
   "quantity" => "230",
   "url" => "images/elixir_strings.jpg"
 
@@ -143,7 +143,7 @@ product_5 = Product.new({
   "category_id" => 2,
   "manufacturer_id" => 1,
   "product_name" => "Deering Banjo Strings",
-  "description" => "Deering's high quality Banjo Strings. Handmade in the USA",
+  "description" => "Deering's high quality Banjo Strings.",
   "list_price" => "9.99",
   "quantity" => 200,
   "url" => "images/deering_strings.jpg"

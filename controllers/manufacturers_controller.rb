@@ -18,13 +18,13 @@ post '/manufacturers' do
 end
 
 get '/manufacturers/:id' do
-  @manufacturer = Manufacturer.find(params['id'].to_i)
+  @manufacturers = Manufacturer.find(params['id'].to_i)
   erb(:"manufacturers/show")
 end
 
 get '/manufacturers/:id/edit' do
-  @product = Product.all
-  @manufacturer = Manufacturer.find(params['id'])
+  @products = Product.all
+  @manufacturers = Manufacturer.find(params['id'])
   erb(:"manufacturers/edit")
 end
 

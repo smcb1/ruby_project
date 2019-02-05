@@ -8,8 +8,8 @@
   <% for product in @products %>
   <div class="col-xs-4">
     <div class="box"><p><a href="/products/<%= product.id %>"><%= product.product_name %></a></p></div>
-    <div class="box"><p>Category: <%= product.get_category %></p></div>
-    <div class="box"><p>Cost: £<%= product.list_price %></p></div>
+    <div class="box"><p><%= product.description %></p></div>
+    <div class="box"><p>£<%= product.list_price %></p></div>
   </div>
   <% end %>
 </div>

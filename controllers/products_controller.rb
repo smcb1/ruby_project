@@ -22,14 +22,14 @@ post '/products' do
 end
 
 get '/products/:id' do
-  @product = Product.find(params['id'].to_i)
+  @products = Product.find(params['id'].to_i)
   erb(:"products/show")
 end
 
 get '/products/:id/edit' do
   @manufacturers = Manufacturer.find(params['id'])
   @categories = Category.all
-  @product = Product.find(params['id'])
+  @products = Product.find(params['id'])
   erb(:"products/edit")
 end
 
