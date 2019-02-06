@@ -7,10 +7,6 @@ body {
   box-sizing: border-box;
 }
 
-.row {
-
-}
-
 .header {
   background-color: #000;
   background-image: url("../images/header.jpg");
@@ -55,14 +51,14 @@ body {
   display: flex;
   flex-direction: row;
   align-content: stretch;
-  justify-content: space-between
+  justify-content: space-around;
 }
 .flex-grid-thirds .row {
   width: 32%;
 }
 
 .item {
-  background-color: #white;
+  background-color: white;
   color: white;
   padding: 10px;
   border: 2px solid #ffffff8c;
@@ -128,4 +124,19 @@ body {
 
 input[type=submit]:hover {
   background-color: #2D25228c;
+
+}
+
+.inventory-box{
+  display: flex;
+  justify-content: center;
+}
+
+.images-center{
+  display: flex;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
 }
