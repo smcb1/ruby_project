@@ -11,4 +11,4 @@
 </div>
 
 <a href="/manufacturers/<%= @manufacturers.id %>/edit" class="button">Edit</a>
-<form action="/manufacturers/<%= @manufacturers.id %>/delete" method="POST"><input class="button" type="submit" value="Delete"></form>
+<form action="/manufacturers/<%= @manufacturers.id %>/delete" method="POST"><input class="button" type="submit" onclick="return confirm('Confirm Delete?');" value="Delete"></form>
