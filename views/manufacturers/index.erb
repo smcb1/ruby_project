@@ -6,7 +6,7 @@
 
 <div class="row">
   <% for manufacturer in @manufacturers %>
-  <div class="col-xs-4">
+  <div class="col-xs-4 border-shadow-left">
     <div class="box"><p><a href="/manufacturers/<%= manufacturer.id %>"><%= manufacturer.contact_name %></a></p></div>
     <div class="box"><p><%= manufacturer.contact_address %></p></div>
     <div class="box"><p>Tel: <%= manufacturer.contact_number %></p></div>

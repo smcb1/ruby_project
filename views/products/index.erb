@@ -6,7 +6,7 @@
 
 <div class="row">
   <% for product in @products %>
-  <div class="col-xs-4">
+  <div class="col-xs-4  border-shadow-left">
     <div class="box"><p><a href="/products/<%= product.id %>"><%= product.product_name %></a></p></div>
     <div class="box"><p><%= product.description %></p></div>
     <div class="box"><p>£<%= product.list_price %></p></div>

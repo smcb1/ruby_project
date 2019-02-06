@@ -13,16 +13,13 @@
 
     <label>
       Select a Product Category:
-      <select id="category_type" name="category_type" style="color:black;">
+      <select id="category_type" name="category_id" style="color:black;">
         <% for category in @categories %>
         <option value="<%= category.id %>"><%= category.category_type %></option>
         <% end %>
       </select>
     </label>
   </div>
-
-  <input type="hidden" name="manufacturer_id" id="manufacturer_id" value="<%= manufacturer.id %>">
-  <input type="hidden" name="category_id" id="category_id" value="<%= category.id %>">
 
   <div>
     <label for="product_name">Product Name:</label>
@@ -47,3 +44,4 @@
   <div>
     <input type="submit" class="button" value="Add Product"/>
   </div>
+</form>
