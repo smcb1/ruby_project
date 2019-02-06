@@ -92,6 +92,16 @@ manufacturer_5 = Manufacturer.new({
 
 manufacturer_5.save
 
+manufacturer_6 = Manufacturer.new({
+  "contact_name" => "Bill Blaylock",
+  "contact_address" => "Hill Farm. Springfield, Ohio. USA",
+  "contact_number" => "456 789 1234",
+  "list_cost" => "449.99",
+  "url" => "images/hal_logo.jpg"
+})
+
+manufacturer_6.save
+
 
 product_1 = Product.new({
   "category_id" => 1,
@@ -160,6 +170,17 @@ product_6 = Product.new({
   "url" => "images/scruggs_book.jpg"
 })
 product_6.save
+
+product_7 = Product.new({
+  "category_id" => 3,
+  "manufacturer_id" => 6,
+  "product_name" => "Blaylock Brass Tone Ring",
+  "description" => "Bill Blaylocks tone rings, hand made in USA. .",
+  "list_price" => "599.99",
+  "quantity" => 8,
+  "url" => "images/tone_ring.jpg"
+})
+product_7.save
 
 binding.pry
 nil
