@@ -83,7 +83,7 @@ manufacturer_4 = Manufacturer.new({
 manufacturer_4.save
 
 manufacturer_5 = Manufacturer.new({
-  "contact_name" => "Hal Leonard Banjo Books",
+  "contact_name" => "Hal Leonard Books",
   "contact_address" => "5 George Street. Knocksville, Kentucky. USA",
   "contact_number" => "456 789 1234",
   "list_cost" => "11.99",
@@ -153,11 +153,11 @@ product_5.save
 product_6 = Product.new({
   "category_id" => 7,
   "manufacturer_id" => 5,
-  "product_name" => "Happy Truam - Learn Banjo Book",
-  "description" => "Happy Truam teaches his unique banjo stlye, Clawhammer and Scruggs Style.",
+  "product_name" => "Master the banjo with Earl Scruggs",
+  "description" => "Earl Scurggs teaches his unique banjo stlye named after him; Scruggs Style.",
   "list_price" => "13.99",
   "quantity" => 200,
-  "url" => "images/happy_book.jpg"
+  "url" => "images/scruggs_book.jpg"
 })
 product_6.save
 
